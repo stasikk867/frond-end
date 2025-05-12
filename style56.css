@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: rgb(189, 222, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.labs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lab-button {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background: #5683b4;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.2s, background 0.3s;x
+}
+
+.lab-button:hover {
+    background: #8ec5ff;
+    transform: scale(1.1);
+}
