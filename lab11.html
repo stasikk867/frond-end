@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1: Форми</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+    <h1>Форми HTML</h1>
+
+    <form>
+        <fieldset>
+            <legend>Однорядкове текстове поле</legend>
+            <input type="text" name="username" placeholder="Введіть ім'я" maxlength="20" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Багаторядкове текстове поле</legend>
+            <textarea name="comments" rows="4" cols="50" placeholder="Ваш коментар..." required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Інші типи input</legend>
+            <input type="password" name="pass" placeholder="Пароль"><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="range" name="volume" min="0" max="100">
+        </fieldset>
+
+        <fieldset>
+            <legend>Перемикачі (radio)</legend>
+            <p>Стать:</p>
+            <input type="radio" name="gender" value="male" id="m" checked>
+            <label for="m">Чоловіча</label>
+            <input type="radio" name="gender" value="female" id="f">
+            <label for="f">Жіноча</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Прапорці (checkbox)</legend>
+            <label><input type="checkbox" name="hobby" value="reading"> Читання</label>
+            <label><input type="checkbox" name="hobby" value="sports"> Спорт</label>
+            <label><input type="checkbox" name="hobby" value="coding"> Програмування</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Випадаючий список</legend>
+            <select name="faculty">
+                <optgroup label="Технічні науки">
+                    <option value="it">ІТ</option>
+                    <option value="engineering">Інженерія</option>
+                </optgroup>
+                <optgroup label="Гуманітарні науки">
+                    <option value="history">Історія</option>
+                    <option value="philology">Філологія</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Список множинного вибору</legend>
+            <select name="skills" multiple size="4">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JavaScript</option>
+                <option value="react">React</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Кнопки</legend>
+            <input type="submit" value="Відправити">
+            <input type="reset" value="Очистить форму">
+            <input type="button" value="Click me!" onClick='alert("Oh, you have been clicked me!!!")'>
+        </fieldset>
+    </form>
+
+    <div class="pseudo-demo">
+        Це приклад тексту з псевдоелементами.
+    </div>
+
+    <h2 id="target">Я ціль</h2>
+    <a href="#target">Перейти до цілі</a>
+
+    <ul>
+        <li>Один</li>
+        <li>Два</li>
+        <li>Три</li>
+    </ul>
+
+</body>
+</html>

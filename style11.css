@@ -1,0 +1,183 @@
+/* Покращене оформлення для HTML-форми та псевдоелементів/псевдокласів */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #eaf6ff, #fdfdfd);
+    padding: 40px;
+    color: #333;
+    line-height: 1.6;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+h3 {
+    color: #2980b9;
+    margin-top: 40px;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 5px;
+    font-size: 1.3em;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 2px solid #dce1e5;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f9ff;
+    box-sizing: border-box;
+}
+
+legend {
+    font-weight: bold;
+    color: #2e6da4;
+    padding: 0 12px;
+    font-size: 1.1em;
+    background-color: #eaf2f8;
+    border-radius: 5px;
+}
+
+input, textarea, select {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    margin: 10px 0;
+    border: 1px solid #ccd6dd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.5);
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #2d3436;
+}
+
+input[type="submit"], input[type="reset"], input[type="button"] {
+    width: 100%;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+    background-color: #2471a3;
+}
+
+select[multiple] {
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        padding: 15px;
+        grid-template-columns: 1fr;
+    }
+    input, textarea, select {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+    input[type="submit"], input[type="reset"], input[type="button"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Псевдоелементи */
+.pseudo-demo::before {
+    content: "Початок: ";
+    color: green;
+}
+.pseudo-demo::after {
+    content: " :Кінець";
+    color: red;
+}
+.pseudo-demo::first-letter {
+    font-size: 150%;
+    font-weight: bold;
+}
+.pseudo-demo::first-line {
+    color: blue;
+}
+
+/* Псевдокласи */
+a:link {
+    color: #3498db;
+}
+a:visited {
+    color: #8e44ad;
+}
+a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+a:active {
+    color: #27ae60;
+}
+
+input:valid {
+    border: 2px solid #2ecc71;
+}
+input:invalid {
+    border: 2px solid #e74c3c;
+}
+input:enabled {
+    background-color: #ecf9ec;
+}
+li:nth-last-of-type(2) {
+    background-color: #fff3cd;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+#target:target {
+    background-color: #d6eaf8;
+    border: 2px dashed #2980b9;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
