@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+}
+
+/* Header */
+.header {
+  position: absolute; /* 👈 поверх фото */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  background: transparent; /* 👈 прибираємо білий фон */
+  z-index: 10;
+}
+
+.logo {
+  background-color: #fa5c65;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-top: -40px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff; /* 👈 зробимо меню білим на фоні зображення */
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('jun.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+}
+
+.hero-content {
+  color: white;
+  text-align: left;
+  padding-top: 120px; /* відступ від логотипу */
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  line-height: 1.3;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #fa5c65;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: darkred;
+}
+
+/* Features Section */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 60px 40px;
+  gap: 30px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.feature p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.feature a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Portfolio */
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 60px 40px;
+  gap: 30px;
+  align-items: center;
+}
+
+.portfolio-image img {
+  width: 100%;
+  max-width: 700px;
+}
+
+.portfolio-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.portfolio-text a {
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Team */
+.team {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.team p {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.team-grid-horizontal {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.member-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  flex: 1 1 30%;
+  max-width: 500px;
+  /* ❌ без фону, без рамки */
+}
+
+.member-horizontal img {
+  width: 150px;      /* 🔺 ЗБІЛЬШЕНІ */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.member-info {
+  text-align: left;
+}
+
+.member-info h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.member-info p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.member-info a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.member-info a:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content {
+    padding-top: 160px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero {
+    height: 90vh;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .portfolio-image img {
+    margin: 0 auto;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
