@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя освіта</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f5f5f5;
+    }
+
+    /* Кнопка-назад (фото зліва вгорі) */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 120px;
+      height: 120px;
+      cursor: pointer;
+      border-radius: 10px;
+      overflow: hidden;
+      
+      transition: transform 0.3s ease;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .back-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Заголовок по центру, великий */
+    h1 {
+      text-align: center;
+      font-size: 60px;
+      margin: 35px 20px 40px;
+      font-weight: bold;
+    }
+
+    /* Червоний блок з текстом і фото */
+    /* Червоний блок з текстом і фото */
+.content {
+  background: red;
+  color: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  animation: fadeIn 1s ease;
+  max-width: 1300px; /* ДОДАНО обмеження ширини */
+  justify-content: center; /* Центрування внутрішнього контенту */
+}
+
+.content img {
+  width: 600px; /* ЗБІЛЬШЕНО розмір фото */
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+    .text {
+      font-size: 18px;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 38px;
+      }
+
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .back-btn {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Фото у кутку як кнопка "назад" -->
+  <div class="back-btn" onclick="history.back()" title="Повернутись назад">
+    <img src="dfr.png" alt="Назад">
+  </div>
+
+  <!-- Заголовок по центру -->
+  <h1>Моя освіта</h1>
+
+  <!-- Контент -->
+<div class="content">
+  <img src="ПНУ11.jpg" alt="Університет">
+  <div class="text">
+    Я навчаюся на спеціальності <b>“Інженерія програмного забезпечення”</b> у Прикарпатському національному університеті імені Василя Стефаника.<br><br>
+
+    Це дало мені міцну базу у програмуванні, алгоритмах, структурах даних і командній роботі. Ми вивчаємо мови програмування, парадигми, об’єктно-орієнтований підхід та системи керування базами даних.<br><br>
+
+    У рамках навчання ми працюємо з реальними задачами, проєктуємо системи, пишемо курсові проєкти, співпрацюємо з викладачами та одногрупниками над спільними проєктами.<br><br>
+
+    Особливу увагу приділяємо сучасним технологіям — HTML, CSS, JavaScript, React, Git, а також методологіям розробки (Agile, Scrum).<br><br>
+
+    Паралельно з навчанням я активно розвиваюся у фронтенд-розробці. Створюю повноцінні вебзастосунки, навчаюся працювати з адаптивною версткою, REST API, а також навчаюся принципам UX/UI-дизайну.<br><br>
+
+    Моєю метою є стати професійним розробником, який не лише знає теорію, а й впевнено застосовує її на практиці.
+  </div>
+</div>
+
+
+</body>
+</html>

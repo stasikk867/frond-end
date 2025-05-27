@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Що я читаю</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: white;
+      color: black;
+    }
+
+    .reading-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+    }
+
+    .reading-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .reading-header img {
+      width: 150px;
+      height: 150px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .reading-header img:hover {
+      transform: scale(1.2);
+    }
+
+    .reading-header h2 {
+      font-size: 60px;
+      font-weight: 800;
+    }
+
+    .book-covers {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
+
+    .book-covers img {
+      width: 150px;
+      height: auto;
+      border: 4px solid black;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .book-covers img:hover {
+      transform: scale(1.05);
+    }
+
+    .red-background {
+      background-color: #d40000;
+      color: white;
+      padding: 60px 30px 50px;
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+      margin-top: -60px; /* ⬅️ Зсуває блок вгору, щоб починався після обкладинок */
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .red-background p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 0.6s ease forwards;
+    }
+
+    /* Анімація появи кожного абзацу */
+    .red-background p:nth-child(1) { animation-delay: 0.1s; }
+    .red-background p:nth-child(2) { animation-delay: 0.2s; }
+    .red-background p:nth-child(3) { animation-delay: 0.3s; }
+    .red-background p:nth-child(4) { animation-delay: 0.4s; }
+    .red-background p:nth-child(5) { animation-delay: 0.5s; }
+    .red-background p:nth-child(6) { animation-delay: 0.6s; }
+    .red-background p:nth-child(7) { animation-delay: 0.7s; }
+    .red-background p:nth-child(8) { animation-delay: 0.8s; }
+
+    .red-background p strong {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .reading-header h2 {
+        font-size: 32px;
+      }
+
+      .book-covers {
+        gap: 10px;
+      }
+
+      .book-covers img {
+        width: 120px;
+      }
+
+      .red-background {
+        padding: 40px 20px;
+        margin-top: -40px;
+      }
+
+      .red-background p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="reading-wrapper">
+    <!-- Назад + заголовок -->
+    <div class="reading-header">
+      <img src="as12.png" alt="Назад" onclick="history.back()" />
+      <h2>Що я читаю</h2>
+    </div>
+
+    <!-- Книги -->
+    <div class="book-covers">
+      <img src="kni1.webp" alt="Книга 1" />
+      <img src="kni2.jpg" alt="Книга 2" />
+      <img src="kni3.jpg" alt="Книга 3" />
+      <img src="kni4.jpg" alt="Книга 4" />
+    </div>
+
+    <!-- Текстовий блок на червоному -->
+    <div class="red-background">
+      <p><strong>Що я читаю, коли не в коді</strong></p>
+      <p>У вільний час я занурююся в книги — але не легке чтиво, а те, що змушує відчути, подумати, навіть трохи злякатися.</p>
+      <p>Мені близькі трилери, психологічні драми, детективи, медичні історії з ноткою хорору та холодної логіки.</p>
+      <p>Особливе місце в серці – у Тесс Ґеррітсен. Її книги — це не просто сюжет, а хірургічна точність у деталях, атмосфера, де кожен рядок — як надріз скальпелем.</p>
+      <p>Я читаю її як код: уважно, повільно, в пошуку сенсу між рядками.</p>
+      <p>Люблю Стівена Кінга за його вміння показати темне у звичайному, Ґіліан Флінн — за персонажів, які ламаються, але не ламають сюжет.</p>
+      <p>Ці автори надихають мене як розробника: вони створюють світ, в який віриш. А я створюю сайти, яким хочеться довіряти.</p>
+      <p>📖 Книга — це як дебагінгрефлекс: якщо не затягує з перших секунд, ти йдеш далі. Але коли влучає — ти забуваєш, що існує реальність.</p>
+    </div>
+  </div>
+
+</body>
+</html>

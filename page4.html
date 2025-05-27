@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Де я живу?</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      animation: fadeIn 1s ease-in-out;
+      position: relative;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Кнопка-назад у вигляді фото */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 150px;
+      height: 150px;
+      cursor: pointer;
+      border-radius: 10px;
+      overflow: hidden;
+     
+      transition: transform 0.3s ease;
+      z-index: 100;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .back-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Верхній білий блок */
+    .header {
+      background-color: white;
+      text-align: center;
+      padding: 60px 20px 45px;
+    }
+
+    .header h1 {
+      font-size: 70px;
+      font-weight: bold;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header img.icon {
+      width: 70px;
+      height: 80px;
+    }
+
+    /* Основний червоний блок */
+    .content {
+      background-color: red;
+      color: white;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .content img.city-img {
+      width: 800px;
+      height: 500px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .text-block {
+      max-width: 500px;
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: left;
+    }
+.map-section {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.map-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  width: 1200px;
+  height: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 32px;
+        flex-direction: column;
+      }
+
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .text-block {
+        text-align: center;
+        font-size: 16px;
+      }
+
+      .content img.city-img {
+        width: 90%;
+      }
+
+      .back-btn {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Кнопка назад -->
+  <div class="back-btn" onclick="history.back()" title="Повернутись назад">
+    <img src="tht.png" alt="Назад">
+  </div>
+
+  <!-- Верхній блок з іконкою -->
+  <div class="header">
+    <h1>
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Локація">
+      Де я живу?
+    </h1>
+  </div>
+
+  <!-- Основна частина -->
+  <div class="content">
+    <img class="city-img" src="RF5VP.jpg" alt="Івано-Франківськ">
+    
+    <div class="text-block">
+      <p>
+        Моє місто — Івано-Франківськ.  
+        Івано-Франківськ — це не просто точка на карті, це місце, де я вірю, творю і продовжую розвиватися. Це місто має особливий ритм — спокійний, затишний, але водночас наповнений творчим імпульсом.
+      </p><br>
+      <p>
+        Тут легко знайти натхнення: у ранковій каві на площі Ринок, у вузеньких вуличках зі старовинною архітектурою або в галасливих вечорах біля “Стометрівки”.
+      </p><br>
+      <p>
+        Франківськ надихає на щирість. У ньому є щось домашнє: люди вітаються на вулицях, підтримують локальні ініціативи, дбають про культуру. Тут глибоко відчувається дух України — сучасної, відкритої, з історією, що не дає забути, хто ми є.
+      </p><br>
+      <p>
+        Жити в Івано-Франківську — це ніби весь час бути трохи в подорожі, але завжди вдома.
+      </p>
+    </div>
+    <!-- Карта -->
+<div class="map-section">
+  <h2>На карті:</h2>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2615.061222727452!2d24.701306215803977!3d48.9226339792931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c17c0a6c963b%3A0x2e3fa7c2fc5707f0!2z0JjQvdGC0LXRgNC90Y8g0JHRg9GI0LjQvdC40YbRjNC60LAg0J_RgNC40YHQv9C10LrRgiwg0KDQtdGB0L_Rg9Cx0LvQsNC90YHRjNC60LAg0LrQvtGA0L_Rg9GB!5e0!3m2!1suk!2sua!4v1633347336603!5m2!1suk!2sua"
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+  </div>
+
+</body>
+</html>

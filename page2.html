@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Що я слухаю?</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Кнопка-назад */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 145px;
+      height: 145px;
+      cursor: pointer;
+      border-radius: 10px;
+      overflow: hidden;
+      
+      transition: transform 0.3s ease;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .back-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .top-section {
+      background-color: white;
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    .top-section h1 {
+      font-size: 80px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    .main-content {
+      background-color: red;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .main-content img.music-img {
+      width: 700px;
+      max-width: 100%;
+      border: 3px solid black;
+      margin: 20px 0;
+    }
+
+    .text-bold {
+      font-size: 70px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 30px;
+    }
+
+    .eurovision-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 10px;
+    }
+
+    .eurovision-section img {
+      width: 500px;
+      float: right;
+      margin-left: 20px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .eurovision-section p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .back-btn {
+        width: 50px;
+        height: 50px;
+      }
+
+      .top-section h1 {
+        font-size: 30px;
+      }
+
+      .text-bold {
+        font-size: 24px;
+      }
+
+      .eurovision-section img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+      }
+
+      .eurovision-section {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Кнопка назад -->
+  <div class="back-btn" onclick="history.back()" title="Назад">
+    <img src="hjh.png" alt="Назад">
+  </div>
+
+  <!-- Верхня біла секція -->
+  <div class="top-section">
+    <h1>🎵 Що я слухаю?</h1>
+  </div>
+
+  <!-- Основний червоний блок -->
+  <div class="main-content">
+    <img class="music-img" src="moa.jpg" alt="Моя сосочка">
+    <div class="text-bold">БЕЗ СЛІВ</div>
+
+    <!-- Євробачення -->
+    <div class="eurovision-section">
+      <img src="ghg.webp" alt="Євробачення">
+      <p>
+        Я великий фанат <strong>Євробачення</strong>. Щороку цей конкурс об'єднує мільйони людей у любові до музики, культури та емоцій. Це більше, ніж шоу — це символ єдності та надії.
+      </p>
+      <p>
+        Я з дитинства дивлюсь кожен ефір і завжди вболіваю за наших виконавців. Для мене важливо не тільки шоу, а й ті послання, які учасники передають через музику.
+      </p>
+      <p>
+        Моє хобі — аналізувати виступи, оцінювати постановки, голос і сценічну подачу. Я веду невеликий блог, де ділюсь враженнями, прогнозами та топами. Це моє захоплення і натхнення.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
